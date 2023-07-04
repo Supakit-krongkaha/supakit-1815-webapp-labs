@@ -1,0 +1,23 @@
+ul.circle {
+    list-style-type: circle;
+}
+
+ul.square {
+    list-style-type: square;
+}
+
+table  {
+    border-collapse: collapse; 
+}
+
+th, td{
+    border: 1px solid black;
+}
+
+td {
+    text-align: right;
+}
+ 
+#background{
+    background-color: yellow;
+}

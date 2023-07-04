@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+}
+
+.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    width: 100%;
+}
+
+.tab li {   
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+} 
+
+li a:hover {
+    background-color: purple;
+}
+
+li a:active {
+    color: black;
+    background-color: yellow;
+}
+
+#unordered {
+    margin: 20px;
+    padding: 5px;
+    border: 5px solid blue;
+    width: 200px;
+    background-color:rgb(141, 169, 231);
+}
+
+#ordered {
+    margin: 20px;
+    padding: 5px;
+    width: 200px;
+    border: 5px solid green;
+    background-color:rgb(144, 240, 162);
+}
+ul.circle {
+    list-style-type: circle;
+}
+
+

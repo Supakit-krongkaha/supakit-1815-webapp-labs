@@ -1,0 +1,23 @@
+table ,tr, th, td {
+    border: 1px solid black;      
+}
+
+td {
+    text-align: center;
+}
+
+table , td {
+    background-color: aliceblue;
+}
+
+.Monday {
+    background-color:  yellow;
+}
+
+.Tuesday{
+    background-color:  pink;
+}
+
+.Wednesday{
+    background-color: rgb(77, 173, 77);
+}
