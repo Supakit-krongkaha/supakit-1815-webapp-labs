@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object-Oriented Programming</title>
+  </head>
+  <body>
+    <script>
+      // Constructor function for Song
+      function Song(title, artist) {
+        this.title = title;
+        this.artist = artist;
+      }
+
+      // Method on the prototype for playing the song
+      Song.prototype.play = function () {
+        console.log(`Playing: ${this.title} by ${this.artist}`);
+      };
+
+      // Testing with favorite songs
+      const song1 = new Song("Money", "Lisa");
+      const song2 = new Song("ชีวิตยังคงสวยงาม", "Bodyalam");
+
+      song1.play();
+      song2.play();
+    </script>
+  </body>
+</html>
