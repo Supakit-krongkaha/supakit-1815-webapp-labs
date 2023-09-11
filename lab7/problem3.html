@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App: Restaurant Information</title>
+    <style>
+        .restaurant-name {
+            color: blue;
+        }
+        .location {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="restaurant-list"></ul>
+
+    <script>
+
+fetch('places.json')
+            .then(response => response.json())
+            .then(data => {
+                const restaurantList = document.getElementById('restaurant-list');
+                
+                data.results.forEach(restaurant => {
+                    const {lat, lng} = restaurant.geometry.location
+                    const listItem = document.createElement('div');
+                    listItem.innerHTML = `
+                        <span class="restaurant-name">name = ${restaurant.name}</span> 
+                        <br><span class="location">location = ${lat} ${lng}</span>
+                    `;
+                    restaurantList.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading data:', error);
+            });
+    </script>
+</body>
+</html>

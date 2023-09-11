@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GitHub Info</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%; /* ทำให้มีรูปร่างเป็นวงกลม */
+        border: 5px solid #a2a9f6; /* สีขอบและความหนาขอบ */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <a id="githubLink" target="_blank" href="">Supakit Krongkaha</a><br />
+    </h1>
+    <img id="avatar" src="" alt="GitHub Avatar" />
+
+    <script>
+      const username = "Supakit-krongkaha"; // Replace with your GitHub username
+      const apiUrl = `https://api.github.com/users/${username}`;
+
+      fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          const githubLinkElement = document.getElementById("githubLink");
+          const avatarElement = document.getElementById("avatar");
+
+          githubLinkElement.href = data.html_url;
+          avatarElement.src = data.avatar_url;
+        })
+        .catch((error) => {
+          console.error("Error fetching GitHub data:", error);
+        });
+    </script>
+  </body>
+</html>
